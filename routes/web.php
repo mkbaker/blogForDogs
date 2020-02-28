@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'posts' => App\BlogPost::latest()->get()
+    ]);
 });
+
+// Route::get('/posts', 'BlogPostController@index')->name('posts.index');

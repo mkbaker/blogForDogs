@@ -51,25 +51,29 @@
 
 		<!-- One -->
 			<section id="one" class="wrapper style2">
-				<div class="inner">
-					<div>
-						<div class="box">
-							<div class="image fit">
-                                <img src="https://images.unsplash.com/photo-1569145128494-9ebff3f617eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="" />
-							</div>
-							<div class="content">
-								<header class="align-center">
-									<h2>Little Dog, Big World</h2>
-									<p>Most angery pupper I have ever seen much</p>
-								</header>
-								<hr />
-								<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-								<p>Vivamus fermentum nibh vel pharetra blandit. Cras a purus urna. Sed et libero ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse id hendrerit felis. Nulla viverra tempor dui at congue. Pellentesque quis nulla ornare, congue nisi id, finibus nulla. Aliquam sit amet hendrerit purus. Donec libero massa, posuere fermentum eros sit amet, maximus fringilla augue. Maecenas at rhoncus lorem. Vivamus ultricies consequat est, efficitur convallis libero. Vivamus rutrum semper mauris, vitae consequat eros tempor ac. Pellentesque et ornare sapien</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+                <h1>Latest Posts</h1>
+                <div class="inner">
+		            <div class="grid-style">
+                    @foreach($posts as $post)
+			            <div>
+			            	<div class="box">
+			            		<div class="image fit">
+                                    <img src="{{$post->photo_url}}" alt="" />
+			            		</div>
+			            		<div class="content">
+			            			<header class="align-center">
+			            				<h2>{{$post->title}}</h2>
+			            				<p>{{$post->excerpt}}</p>
+			            			</header>
+			            			<hr />
+                                    <p>{{$post->body}}</p>
+			            		</div>
+			            	</div>
+                        </div>
+                    @endforeach
+                    </div>
+                </div>
+            </section>
 
 		<!-- Two -->
 			<section id="two" class="wrapper style3">
@@ -109,40 +113,21 @@
 		<!-- Three -->
 			<section id="three" class="wrapper style2">
 				<div class="inner">
-					<div class="grid-style">
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<img src="images/pic02.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<h2>Lorem ipsum dolor</h2>
-										<p>maecenas feugiat ex purus, quis volutpat lacus placerat</p>
-									</header>
-									<hr />
-									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-								</div>
+					<div>
+						<div class="box">
+							<div class="image fit">
+                                <img src="https://images.unsplash.com/photo-1569145128494-9ebff3f617eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="" />
+							</div>
+							<div class="content">
+								<header class="align-center">
+									<h2>Little Dog, Big World</h2>
+									<p>Most angery pupper I have ever seen much</p>
+								</header>
+								<hr />
+                                <p> Clouds big ol pupper I am bekom fat corgo, noodle horse vvv. Aqua doggo smol borking doggo with a long snoot for pats very hand that feed shibe, mlem.</p>
+                                <p>Dat tungg tho heckin very taste wow doing me a frighten pupperino boof, wow very biscit corgo borking doggo snoot. Dat tungg tho blep pupper boofers noodle horse, heckin I am bekom fat porgo h*ck, you are doing me the shock doge mlem. The neighborhood pupper borkdrive woofer pupperino ruff, heckin good boys what a nice floof long woofer big ol pupper doge, very jealous pupper smol mlem. What a nice floof the neighborhood pupper pupper long doggo, stop it fren.</p>
 							</div>
 						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<img src="images/pic03.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<h2>Vestibulum sit amet</h2>
-										<p>mattis sapien pretium tellus venenatis</p>
-									</header>
-									<hr />
-									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-								</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</section>
