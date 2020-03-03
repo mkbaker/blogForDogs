@@ -13,8 +13,10 @@
 
 Route::get('/', function () {
     return view('welcome', [
-        'posts' => App\BlogPost::latest()->get()
+        'posts' => App\BlogPost::latest()->limit(2)->get()
     ]);
 });
 
-// Route::get('/posts', 'BlogPostController@index')->name('posts.index');
+Route::get('/posts', 'BlogPostController@index');
+
+Route::get('/posts/{post}', 'BlogPostController@show');

@@ -7,11 +7,15 @@ use App\BlogPost;
 
 class BlogPostController extends Controller
 {
-    public function index(BlogPost $posts)
+    public function index()
     {
-        //laravel captures the input on the URI and passes it from the wildcard 
-        //to automatically find an post with that id
-        //the name of your variable has to match the wildcard in the route
-        return view('posts.index', $posts);
+        //render a list of a resource
+        $posts = BlogPost::latest()->get();
+        return view('posts.index', ['posts' => $posts]);
+    }
+
+    public function show(BlogPost $post)
+    {
+        return view('posts.show', ['post' => $post]);
     }
 }
